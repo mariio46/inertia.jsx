@@ -1,13 +1,9 @@
-<p  align="center">
-<a  href="https://laravel.com"  target="_blank">
-<img  src="./react-laravel-inertia.png" alt="Laravel Logo">
-</a>
-</p>
+<p  align="center"> <a  href="https://laravel.com/docs/10.x/starter-kits#breeze-and-inertia"  target="_blank"> <img  src="https://raw.githubusercontent.com/mariio46/inertia.jsx/master/react-laravel-inertia.png"  alt="Laravel Logo"> </a> </p>
 
 ### Usage
 
 ```bash
-git clone https://github.com/irsyadadl/inertia.ts.git project
+git clone https://github.com/mariio46/inertia.jsx.git project
 
 cd project
 
