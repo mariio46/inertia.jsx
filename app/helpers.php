@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('acronym')) {
+if (! function_exists('acronym')) {
     function acronym($string): string
     {
         $words = explode(' ', $string);

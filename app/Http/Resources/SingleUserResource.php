@@ -15,7 +15,7 @@ class SingleUserResource extends JsonResource
             'username' => $this->username,
             'name' => $this->name,
             'email' => $this->email,
-            'email_verified' =>  $this->email_verified_at?->diffForHumans() ?? 'Email not verified',
+            'email_verified' => $this->email_verified_at?->diffForHumans() ?? 'Email not verified',
             'joined' => $this->created_at->diffForHumans(),
             'updated' => $this->updated_at->diffForHumans(),
         ];
