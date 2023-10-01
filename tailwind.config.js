@@ -1,5 +1,3 @@
-import forms from '@tailwindcss/forms';
-import typography from '@tailwindcss/typography';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
@@ -80,5 +78,5 @@ export default {
         },
     },
 
-    plugins: [forms, typography, require('tailwindcss-animate')],
+    plugins: [require('tailwindcss-animate')],
 };

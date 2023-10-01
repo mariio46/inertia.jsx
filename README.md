@@ -25,13 +25,13 @@ php artisan serve
 This project has come with some features like:
 
 -   Authentication
--   User Profile
--   User Avatar
--   User Password
+-   User Profile (Name, Username, Email)
+-   User Avatar (Use Gravatar)
+-   User Change Password
 -   User Delete
--   User Resources (--only=[index, show, destroy])
--   Simple Pagination
--   Fast Paginate
+-   User Resources
+-   Simple Pagination (For View)
+-   Fast Paginate (For Backend)
 
 ### Quick Login
 
@@ -53,14 +53,14 @@ Feel free to use someting like [pnpm](https://pnpm.io/) or [yarn](https://yarnpk
 # Format with prettier
 npm run format
 
+# Format with prettier
+npm run check
+
 # Start development
 npm run dev
 
 # Build the app
 npm run build
-
-# Testing for SSR
-npm run preview
 ```
 
 ### Components
@@ -73,8 +73,11 @@ Of course it is not just about authentication, but also about updating user prof
 
 ### Thanks to
 
+-   [Parsinta](https://github.com/teamparsinta)
+-   [Isryad A. Panjaitan](https://github.com/irsyadadl)
 -   [Laravel](https://github.com/laravel/framework)
--   [Inertia](https://github.com/inertiajs/inertia) with [React](https://github.com/facebook/react) and [Typescript](https://github.com/microsoft/TypeScript)
+-   [Inertia](https://github.com/inertiajs/inertia) with [React](https://github.com/facebook/react)
 -   [Vite](https://vitejs.dev/) with [Vite plugin](https://github.com/laravel/vite-plugin) and friends
 -   [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) and friends
 -   [clsx](https://github.com/lukeed/clsx)
+-   [Hammerstone](https://github.com/hammerstonedev)
