@@ -1,5 +1,4 @@
 import AuthLayout from '@/Layouts/auth-layout';
-import React from 'react';
 import { useRef, useState } from 'react';
 import InputError from '@/components/input-error';
 import { useForm } from '@inertiajs/react';

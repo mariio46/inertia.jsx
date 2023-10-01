@@ -1,6 +1,6 @@
 import { Toast, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport } from '@/components/toast';
 import { useToast } from '@/lib/use-toast';
-import { IconCheck, IconCircleCheck } from '@tabler/icons-react';
+import { IconCircleCheck } from '@tabler/icons-react';
 
 export function Toaster() {
     const { toasts } = useToast();

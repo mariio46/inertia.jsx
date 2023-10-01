@@ -6,19 +6,6 @@ import { AvatarImage } from '@radix-ui/react-avatar';
 import { UserListOptions } from './partials/user-list-options';
 
 export default function Show({ user }) {
-    // const { delete: destroy } = useForm();
-
-    // function destroyUser(user) {
-    //     destroy(route('users.destroy', user), {
-    //         preserveScroll: true,
-    //         onSuccess: () => {
-    //             toast({
-    //                 title: 'User has been deleted succesfully',
-    //                 description: getTimeStamp(),
-    //             });
-    //         },
-    //     });
-    // }
     return (
         <Container>
             <Card className={'mx-auto max-w-sm lg:mx-0'}>

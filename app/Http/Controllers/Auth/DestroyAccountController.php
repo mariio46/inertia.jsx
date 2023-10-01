@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
 class DestroyAccountController extends Controller
@@ -22,7 +21,7 @@ class DestroyAccountController extends Controller
 
         $user = $request->user();
 
-        Auth::logout();
+        auth()->logout();
 
         $user->delete();
 

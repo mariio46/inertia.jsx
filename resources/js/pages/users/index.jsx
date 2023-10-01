@@ -1,4 +1,3 @@
-import React from 'react';
 import AuthLayout from '@/Layouts/auth-layout';
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/table';

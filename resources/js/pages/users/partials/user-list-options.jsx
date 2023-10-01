@@ -2,7 +2,7 @@ import { Button } from '@/components/button';
 import { Link, useForm } from '@inertiajs/react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/dropdown-menu';
 import { DropdownDialog } from '@/components/dropdown-dialog';
-import { IconBan, IconDots, IconId, IconTrash, IconPencil } from '@tabler/icons-react';
+import { IconBan, IconDots, IconId, IconTrash } from '@tabler/icons-react';
 import { toast } from '@/lib/use-toast';
 import { getTimeStamp } from '@/lib/get-date';
 

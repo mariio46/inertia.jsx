@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import InputError from '@/components/input-error';
-import { Link, useForm } from '@inertiajs/react';
+import { useForm } from '@inertiajs/react';
 import { Label } from '@/components/label';
 import { Input } from '@/components/input';
 import { Button } from '@/components/button';

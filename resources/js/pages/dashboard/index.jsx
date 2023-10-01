@@ -1,7 +1,6 @@
 import AuthLayout from '@/Layouts/auth-layout';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/card';
 import Container from '@/components/container';
-import React from 'react';
 
 export default function Index() {
     return (
@@ -11,7 +10,6 @@ export default function Index() {
                     <CardTitle>Dashboard</CardTitle>
                     <CardDescription>All statistics related to your account.</CardDescription>
                 </CardHeader>
-                <CardContent>{/* <div className='mb-[100rem]'></div> */}</CardContent>
             </Card>
         </Container>
     );
