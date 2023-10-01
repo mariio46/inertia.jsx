@@ -14,6 +14,7 @@ class UserResource extends JsonResource
             'avatar' => $this->avatar(),
             'username' => $this->username,
             'name' => $this->name,
+            'acronym' => acronym($this->name),
             'email' => $this->email,
             'email_verified' => $this->email_verified_at?->diffForHumans() ?? 'Email not verified',
             'joined' => $this->created_at->diffForHumans(),

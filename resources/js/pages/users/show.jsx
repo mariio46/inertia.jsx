@@ -35,7 +35,7 @@ export default function Show({ user }) {
                     <div className='flex items-center justify-center'>
                         <Avatar className={'h-52 w-52 border-2'}>
                             <AvatarImage src={user.avatar} />
-                            <AvatarFallback>{user.username}</AvatarFallback>
+                            <AvatarFallback>{user.acronym}</AvatarFallback>
                         </Avatar>
                     </div>
                     <div className='mt-5 text-center'>

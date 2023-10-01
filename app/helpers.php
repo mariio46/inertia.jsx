@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('acronym')) {
+if (!function_exists('acronym')) {
     function acronym($string): string
     {
         $words = explode(' ', $string);
@@ -14,11 +14,11 @@ if (! function_exists('acronym')) {
     }
 }
 
-// if (!function_exists('firstWord')) {
-//     function firstWord($string): string
-//     {
-//         $string = explode(' ', trim($string));
+if (!function_exists('firstWord')) {
+    function firstWord($string): string
+    {
+        $string = explode(' ', trim($string));
 
-//         return $string[0];
-//     }
-// }
+        return $string[0];
+    }
+}

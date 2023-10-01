@@ -17,18 +17,18 @@ export default function Menu({ setOpen }) {
                 </PrimaryLink>
             </li>
             <li>
-                <PrimaryLink onSuccess={closeSidebar} href={route('profile.index')} active={route().current('profile.*')} className='flex items-center gap-x-3.5 rounded-lg p-2 text-[0.920rem]/[1.35rem]'>
-                    <IconSettings className='h-6 w-6 stroke-[1.2]' />
-                    Settings
-                </PrimaryLink>
-            </li>
-            <li>
                 <PrimaryLink onSuccess={closeSidebar} href={route('users.index')} active={route().current('users.*')} className='flex items-center gap-x-3.5 rounded-lg p-2 text-[0.920rem]/[1.35rem]'>
                     <IconUsersGroup className='h-6 w-6 stroke-[1.2]' />
                     Users
                 </PrimaryLink>
             </li>
             <Separator className='!my-4' />
+            <li>
+                <PrimaryLink onSuccess={closeSidebar} href={route('profile.index')} active={route().current('profile.*')} className='flex items-center gap-x-3.5 rounded-lg p-2 text-[0.920rem]/[1.35rem]'>
+                    <IconSettings className='h-6 w-6 stroke-[1.2]' />
+                    Settings
+                </PrimaryLink>
+            </li>
             <li>
                 <PrimaryLink onSuccess={closeSidebar} href={route('security.index')} active={route().current('security.*')} className='flex items-center gap-x-3.5 rounded-lg p-2 text-[0.920rem]/[1.35rem]'>
                     <IconShieldLock className='h-6 w-6 stroke-[1.2]' />

@@ -13,7 +13,7 @@ class AuthenticatedUserResource extends JsonResource
             'id' => $this->id,
             'username' => $this->username,
             'name' => $this->name,
-            // 'acronym' => acronym($this->name),
+            'acronym' => acronym($this->name),
             'email' => $this->email,
             'avatar' => $this->avatar(),
         ];

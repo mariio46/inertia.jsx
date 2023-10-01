@@ -40,7 +40,7 @@ export default function Index() {
                                                 <div className='mr-3 shrink-0'>
                                                     <Avatar>
                                                         <AvatarImage src={user.avatar} />
-                                                        <AvatarFallback>{user.username}</AvatarFallback>
+                                                        <AvatarFallback>{user.acronym}</AvatarFallback>
                                                     </Avatar>
                                                 </div>
                                                 <div>
