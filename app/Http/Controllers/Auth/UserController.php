@@ -34,7 +34,7 @@ class UserController extends Controller
                     callback: fn ($query) => $query->orderBy($request->field, $request->direction),
                     default: fn ($query) => $query->latest()
                 )
-                ->paginate($limit)
+                ->fastPaginate($limit)
                 ->withQueryString()
         );
         return inertia('users/index', [
