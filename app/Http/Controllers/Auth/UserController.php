@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Controller;
+use App\Http\Resources\SingleUserResource;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use App\Http\Controllers\Controller;
-use App\Http\Resources\UserResource;
-use App\Http\Resources\SingleUserResource;
 
 class UserController extends Controller
 {
@@ -37,6 +37,7 @@ class UserController extends Controller
                 ->fastPaginate($limit)
                 ->withQueryString()
         );
+
         return inertia('users/index', [
             'users' => fn () => $users,
             'state' => $request->only('limit', 'page', 'search', 'field', 'direction'),
