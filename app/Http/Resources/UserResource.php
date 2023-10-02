@@ -16,9 +16,10 @@ class UserResource extends JsonResource
             'name' => $this->name,
             'acronym' => acronym($this->name),
             'email' => $this->email,
-            'email_verified' => $this->email_verified_at?->diffForHumans() ?? 'Email not verified',
-            'joined' => $this->created_at->diffForHumans(),
-            'updated' => $this->updated_at->diffForHumans(),
+            'email_verified_at' => $this->email_verified_at?->diffForHumans() ?? 'Email not verified',
+            'created_at' => $this->created_at->diffForHumans(),
+            'updated_at' => $this->updated_at->diffForHumans(),
+            'posts_count' => $this->posts_count,
         ];
     }
 }

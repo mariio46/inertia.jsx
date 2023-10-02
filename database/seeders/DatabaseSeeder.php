@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'mariomad2296@gmail.com',
         ]);
 
-        User::factory(10)->create();
+        collect(range(1, 100))->each(function ($_) {
+            \App\Models\User::factory()->hasPosts(rand(0, 16))->create();
+        });
     }
 }
