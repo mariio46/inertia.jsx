@@ -2,9 +2,9 @@ import { Button } from '@/components/button';
 import { Link, useForm } from '@inertiajs/react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/dropdown-menu';
 import { DropdownDialog } from '@/components/dropdown-dialog';
-import { IconBan, IconDots, IconId, IconTrash } from '@tabler/icons-react';
 import { toast } from '@/lib/use-toast';
 import { getTimeStamp } from '@/lib/get-date';
+import { Icon } from '@/components/icon';
 
 export function UserListOptions({ user, details = true }) {
     const { delete: destroy } = useForm();
@@ -25,7 +25,7 @@ export function UserListOptions({ user, details = true }) {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button className='h-7' variant='outline' size='icon'>
-                    <IconDots className=' h-5 w-5 stroke-[1.2]' />
+                    <Icon icon={'IconDots'} className={'h-5 w-5 stroke-[1.2]'} />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='end' className='w-56'>
@@ -35,7 +35,7 @@ export function UserListOptions({ user, details = true }) {
                         <DropdownMenuSeparator />
                         <DropdownMenuItem asChild>
                             <Link href={route('users.show', user)}>
-                                <IconId className='mr-2 h-5 w-5 stroke-[1.2]' />
+                                <Icon icon={'IconId'} />
                                 Details
                             </Link>
                         </DropdownMenuItem>
@@ -43,11 +43,11 @@ export function UserListOptions({ user, details = true }) {
                 ) : null}
                 <DropdownMenuSeparator />
                 <DropdownDialog title='Are you sure?' description='This action will limit user activity.' submit_text='Ban' action={() => console.log(user.username)} buttonStyle='destructive'>
-                    <IconBan className='mr-2 h-5 w-5 stroke-[1.2]' />
+                    <Icon icon={'IconBan'} />
                     Ban
                 </DropdownDialog>
                 <DropdownDialog description='This action cannot be undone. This will permanently delete user account and remove data from our servers.' action={() => destroyUser(user)} submit_text='Delete' buttonStyle='destructive'>
-                    <IconTrash className='mr-2 h-5 w-5 stroke-[1.2]' />
+                    <Icon icon={'IconTrash'} />
                     Delete Permanently
                 </DropdownDialog>
             </DropdownMenuContent>

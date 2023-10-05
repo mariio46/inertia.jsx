@@ -1,6 +1,5 @@
-import React from 'react';
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { Button } from '@/components/button';
+import { Icon } from './icon';
 
 export function ThemeToggle() {
     function disableTransitionsTemporarily() {
@@ -26,9 +25,9 @@ export function ThemeToggle() {
 
     return (
         <>
-            <Button size='icon' variant='outline' className='h-[2.6rem] w-[2.6rem] rounded-lg' type='button' aria-label='Toggle dark mode' onClick={toggleMode}>
-                <SunIcon className='dark:hidden' />
-                <MoonIcon className='hidden dark:block' />
+            <Button size='icon' variant='outline' className='h-[2.6rem] w-[2.6rem] rounded-lg [&>svg]:h-5 [&>svg]:w-5 [&>svg]:stroke-[1.2] ' type='button' aria-label='Toggle dark mode' onClick={toggleMode}>
+                <Icon icon={'IconSun'} className={'dark:hidden'} />
+                <Icon icon={'IconMoonStars'} className={'hidden dark:block'} />
             </Button>
         </>
     );

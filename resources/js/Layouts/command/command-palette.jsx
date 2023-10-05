@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from '@/components/command';
-import { IconAlertTriangle, IconChartPie, IconLogin, IconLogout, IconSettings, IconShieldLock, IconUserCircle } from '@tabler/icons-react';
 import { router, usePage } from '@inertiajs/react';
-import { IconHome2 } from '@tabler/icons-react';
+import { Icon } from '@/components/icon';
 
 export function CommandPalette({ openCommandPalette, setOpenCommandPalette }) {
     const { auth } = usePage().props;
@@ -46,7 +45,7 @@ export function CommandPalette({ openCommandPalette, setOpenCommandPalette }) {
                 <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup heading='Suggestions'>
                     <CommandItem onSelect={() => Redirect(route('home'))}>
-                        <IconHome2 className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                        <Icon icon={'IconHome2'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                         <span>Home</span>
                     </CommandItem>
                 </CommandGroup>
@@ -55,26 +54,26 @@ export function CommandPalette({ openCommandPalette, setOpenCommandPalette }) {
                         <CommandSeparator />
                         <CommandGroup heading='Settings'>
                             <CommandItem onSelect={() => Redirect(route('dashboard'))}>
-                                <IconChartPie className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                                <Icon icon={'IconChartPie'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                                 <span>Dashboard</span>
                             </CommandItem>
                             <CommandItem onSelect={() => Redirect(route('profile.index'))}>
-                                <IconSettings className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                                <Icon icon={'IconSettings'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                                 <span>Settings</span>
                             </CommandItem>
                             <CommandItem onSelect={() => Redirect(route('security.index'))}>
-                                <IconShieldLock className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                                <Icon icon={'IconShieldLock'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                                 <span>Security</span>
                             </CommandItem>
                             <CommandItem onSelect={() => Redirect(route('danger.index'))}>
-                                <IconAlertTriangle className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                                <Icon icon={'IconAlertTriangle'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                                 <span>Danger Zone</span>
                             </CommandItem>
                         </CommandGroup>
                         <CommandSeparator />
                         <CommandGroup>
                             <CommandItem onSelect={() => Logout(route('logout'))}>
-                                <IconLogout className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                                <Icon icon={'IconLogout'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                                 <span>Logout</span>
                             </CommandItem>
                         </CommandGroup>
@@ -84,11 +83,11 @@ export function CommandPalette({ openCommandPalette, setOpenCommandPalette }) {
                         <CommandSeparator />
                         <CommandGroup heading='Authentication'>
                             <CommandItem onSelect={() => Redirect(route('login'))}>
-                                <IconLogin className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                                <Icon icon={'IconLogin'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                                 <span>Login</span>
                             </CommandItem>
                             <CommandItem onSelect={() => Redirect(route('register'))}>
-                                <IconUserCircle className='mr-2 h-4 w-4 stroke-[1.3px]' />
+                                <Icon icon={'IconUserCircle'} className='mr-2 h-4 w-4 stroke-[1.3px]' />
                                 <span>Register</span>
                             </CommandItem>
                         </CommandGroup>

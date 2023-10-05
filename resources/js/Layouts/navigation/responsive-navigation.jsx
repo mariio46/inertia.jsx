@@ -1,11 +1,10 @@
-import React from 'react';
 import ApplicationLogo from '@/components/application-logo';
 import { Link, usePage } from '@inertiajs/react';
-import { IconLogin, IconMenuDeep, IconSearch, IconUserCircle } from '@tabler/icons-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/dropdown-menu';
 import ProfileTrigger from './profile-trigger';
 import MenuItem from './menu-item';
+import { Icon } from '@/components/icon';
 
 export default function ResponsiveNavigation({ setOpenCommandPalette }) {
     const { auth } = usePage().props;
@@ -19,7 +18,7 @@ export default function ResponsiveNavigation({ setOpenCommandPalette }) {
                     <div className='flex items-center gap-x-2'>
                         <ThemeToggle />
                         <button onClick={() => setOpenCommandPalette(true)} className='flex items-center justify-center gap-x-4 rounded-lg border border-border p-2 text-[0.900rem]/[1.35rem] text-muted-foreground hover:text-foreground focus:outline-none'>
-                            <IconSearch className='h-6 w-6' />
+                            <Icon icon={'IconSearch'} className='h-6 w-6' />
                         </button>
                         <DropdownMenu>
                             {auth.user ? (
@@ -34,20 +33,20 @@ export default function ResponsiveNavigation({ setOpenCommandPalette }) {
                             ) : (
                                 <>
                                     <DropdownMenuTrigger className={'grid place-content-center rounded-lg border border-border p-2'}>
-                                        <IconMenuDeep className={'h-6 w-6 stroke-[1.3] text-muted-foreground'} />
+                                        <Icon icon={'IconMenuDeep'} className={'h-6 w-6 stroke-[1.3] text-muted-foreground'} />
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align='end' className={'mt-2 w-64 space-y-2'}>
                                         <DropdownMenuLabel className={'pt-3'}>You are not authenticated</DropdownMenuLabel>
                                         <DropdownMenuSeparator />
                                         <DropdownMenuItem asChild>
                                             <Link href={route('login')}>
-                                                <IconLogin className={'mr-2 h-5 w-5 stroke-[1.2]'} />
+                                                <Icon icon={'IconLogin'} className={'mr-2 h-5 w-5 stroke-[1.2]'} />
                                                 Login
                                             </Link>
                                         </DropdownMenuItem>
                                         <DropdownMenuItem asChild>
                                             <Link href={route('register')}>
-                                                <IconUserCircle className={'mr-2 h-5 w-5 stroke-[1.2]'} />
+                                                <Icon icon={'IconUserCircle'} className={'mr-2 h-5 w-5 stroke-[1.2]'} />
                                                 Register
                                             </Link>
                                         </DropdownMenuItem>

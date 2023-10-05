@@ -1,14 +1,13 @@
 import ApplicationLogo from '@/components/application-logo';
 import { Link, usePage } from '@inertiajs/react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@/components/dropdown-menu';
-import React from 'react';
-import { IconSearch } from '@tabler/icons-react';
 import { ThemeToggle } from '@/components/theme-toggle';
 import PrimaryLink from '@/components/primary-link';
 import { buttonVariants } from '@/components/button';
 import ProfileTrigger from './profile-trigger';
 import MenuItem from './menu-item';
 import { CommandPalette } from '../command/command-palette';
+import { Icon } from '@/components/icon';
 
 export default function NavigationMenu({ openCommandPalette, setOpenCommandPalette }) {
     const { auth } = usePage().props;
@@ -26,7 +25,8 @@ export default function NavigationMenu({ openCommandPalette, setOpenCommandPalet
                             </div>
                             <div className='flex items-center gap-x-4'>
                                 <button onClick={() => setOpenCommandPalette(true)} className='flex items-center gap-x-4 rounded-lg border px-4 py-2.5 text-[0.900rem]/[1.35rem] text-muted-foreground hover:text-foreground focus:outline-none'>
-                                    <IconSearch className='h-4 w-4' />
+                                    <Icon icon={'IconSearch'} className={'h-4 w-4 stroke-[2]'} />
+
                                     <span className='mx-3'>Search...</span>
                                     <kbd className='pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono font-medium opacity-100'>
                                         <span className='text-base'>⌘</span>K

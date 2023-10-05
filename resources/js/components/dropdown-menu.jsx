@@ -1,8 +1,7 @@
 import * as React from 'react';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
-import { CheckIcon, ChevronRightIcon, DotFilledIcon } from '@radix-ui/react-icons';
-
 import { cn } from '@/lib/utils';
+import { Icon } from './icon';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 
@@ -19,7 +18,7 @@ const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
 const DropdownMenuSubTrigger = React.forwardRef(({ className, inset, children, ...props }, ref) => (
     <DropdownMenuPrimitive.SubTrigger ref={ref} className={cn('flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent', inset && 'pl-8', className)} {...props}>
         {children}
-        <ChevronRightIcon className='ml-auto h-4 w-4' />
+        <Icon icon={'IconChevronRight'} className='ml-auto h-4 w-4' />
     </DropdownMenuPrimitive.SubTrigger>
 ));
 DropdownMenuSubTrigger.displayName = DropdownMenuPrimitive.SubTrigger.displayName;
@@ -45,14 +44,14 @@ const DropdownMenuContent = React.forwardRef(({ className, sideOffset = 4, ...pr
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 
-const DropdownMenuItem = React.forwardRef(({ className, inset, ...props }, ref) => <DropdownMenuPrimitive.Item ref={ref} className={cn('relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50', inset && 'pl-8', className)} {...props} />);
+const DropdownMenuItem = React.forwardRef(({ className, inset, ...props }, ref) => <DropdownMenuPrimitive.Item ref={ref} className={cn('relative flex cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&>svg]:mr-2 [&>svg]:h-5 [&>svg]:w-5 [&>svg]:stroke-[1.2]', inset && 'pl-8', className)} {...props} />);
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 
 const DropdownMenuCheckboxItem = React.forwardRef(({ className, children, checked, ...props }, ref) => (
     <DropdownMenuPrimitive.CheckboxItem ref={ref} className={cn('relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50', className)} checked={checked} {...props}>
         <span className='absolute left-2 flex h-3.5 w-3.5 items-center justify-center'>
             <DropdownMenuPrimitive.ItemIndicator>
-                <CheckIcon className='h-4 w-4' />
+                <Icon icon={'IconCheck'} className={'h-4 w-4'} />
             </DropdownMenuPrimitive.ItemIndicator>
         </span>
         {children}
@@ -64,7 +63,7 @@ const DropdownMenuRadioItem = React.forwardRef(({ className, children, ...props 
     <DropdownMenuPrimitive.RadioItem ref={ref} className={cn('relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50', className)} {...props}>
         <span className='absolute left-2 flex h-3.5 w-3.5 items-center justify-center'>
             <DropdownMenuPrimitive.ItemIndicator>
-                <DotFilledIcon className='h-4 w-4 fill-current' />
+                <Icon icon={'IconPointFilled'} className='h-4 w-4 fill-current' />
             </DropdownMenuPrimitive.ItemIndicator>
         </span>
         {children}
